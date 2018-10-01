@@ -113,7 +113,7 @@
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>IMPORTANTE A NF-e DE PRESTAÇÃO DE SERVIÇOS SERÁ EMITIDA E ENVIADA EM ATÉ 5 DIAS ÚTEIS AO CNPJ DECLARADO ACIMA.</p>
                             </div>
-                            <label><strong>São Paulo, 28 de setembro de 2018</strong></label>
+                            <label><strong>São Paulo, <input id='dd' class="col-md-2 mb-1" style="border: none;"> de <input id='mm' class="col-md-3 mb-1" style="border: none;"> de <input id='yy' class="col-md-3 mb-1" style="border: none;"></strong></label>
                         </div>
 
                     </div>
@@ -201,7 +201,7 @@
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>IMPORTANTE A NF-e DE PRESTAÇÃO DE SERVIÇOS SERÁ EMITIDA E ENVIADA EM ATÉ 5 DIAS ÚTEIS AO CNPJ DECLARADO ACIMA.</p>
                             </div>
-                            <label><strong>São Paulo, 28 de setembro de 2018</strong></label>
+                            <label><strong>São Paulo, <input id='dd2' class="col-md-2 mb-1" style="border: none;"> de <input id='mm2' class="col-md-3 mb-1" style="border: none;"> de <input id='yy2' class="col-md-3 mb-1" style="border: none;"></strong></label>
                         </div>
                     </div>
                 </div>
@@ -213,18 +213,18 @@
     <script src="js/jquery.maskMoney.js"></script>
     <script src="js/mascaraCNPJ.js"></script>
     <script>
-        
-        function autofill(){
-            
-          document.getElementById('valorcompra2').value = document.getElementById('valorcompra').value;
-          document.getElementById('nomecli2').value = document.getElementById('nomecli').value;
-          document.getElementById('cnpj2').value = document.getElementById('cnpj').value;
-          document.getElementById('extenso2').value = document.getElementById('extenso').value;
-          document.getElementById('expositor2').value = document.getElementById('expositor').value;
-          document.getElementById('referente2').value = document.getElementById('referente').value;
-            
-        }
-        
+
+                                function autofill() {
+
+                                    document.getElementById('valorcompra2').value = document.getElementById('valorcompra').value;
+                                    document.getElementById('nomecli2').value = document.getElementById('nomecli').value;
+                                    document.getElementById('cnpj2').value = document.getElementById('cnpj').value;
+                                    document.getElementById('extenso2').value = document.getElementById('extenso').value;
+                                    document.getElementById('expositor2').value = document.getElementById('expositor').value;
+                                    document.getElementById('referente2').value = document.getElementById('referente').value;
+
+                                }
+
     </script>
 
     <script>
@@ -238,6 +238,51 @@
         $(document).ready(function () {
             $("#cnpj").mask("99.999.999/9999-99");
         });
+    </script>
+
+    <script>
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        var mes = "";
+        if (mm === 1) {
+            mes = "Janeiro";
+        } else if (mm == 2) {
+            mes = "Fevereiro";
+        } else if (mm == 3) {
+            mes = "Março";
+        }else if (mm == 4) {
+            mes = "Abril";
+        }else if (mm == 5) {
+            mes = "Maio";
+        }else if (mm == 6) {
+            mes = "Junho";
+        }else if (mm == 7) {
+            mes = "Julho";
+        }else if (mm == 8) {
+            mes = "Agosto";
+        }else if (mm == 9) {
+            mes = "Setembro";
+        }else if (mm == 10) {
+            mes = "Outubro";
+        }else if (mm == 11) {
+            mes = "Novembro";
+        }else if (mm == 12) {
+            mes = "Dezembro";
+        }
+
+        document.getElementById('dd').value = dd;
+        document.getElementById('mm').value = mes;
+
+        document.getElementById('dd2').value = dd;
+        document.getElementById('mm2').value = mes;
+
+        document.getElementById('yy').value = yyyy;
+        document.getElementById('yy2').value = yyyy;
+
     </script>
 
 </html>
