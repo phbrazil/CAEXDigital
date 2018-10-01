@@ -69,39 +69,39 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input name="valorcompra" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" readonly type="number"  class="form-control" id="valorcompra" required>
+                                <input name="valorcompra" onkeydown="autofill()" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" type="text"  class="form-control" id="valorcompra" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Recebemos de</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="nomecli" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom" readonly type="text"  class="form-control" id="nomecli" required>
+                            <input name="nomecli" onkeydown="autofill()" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>CNPJ</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="cnpj" data-toggle="tooltip" title="CNPJ do Cliente" data-placement="bottom" readonly type="text"  class="form-control" id="cnpj" required>
+                            <input name="cnpj" onkeyup="autofill()" data-toggle="tooltip" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Expositor</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="expositor" data-toggle="tooltip" title="Expositor" data-placement="bottom" readonly type="text"  class="form-control" id="expositor" required>
+                            <input name="expositor" onkeydown="autofill()" data-toggle="tooltip" title="Expositor" data-placement="bottom"  type="text"  class="form-control" id="expositor" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Valor por extenso</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="extenso" data-toggle="tooltip" title="Valor por Extenso" data-placement="bottom" readonly type="text"  class="form-control" id="extenso" required>
+                            <input name="extenso" onkeydown="autofill()" data-toggle="tooltip" title="Valor por Extenso" data-placement="bottom"  type="text"  class="form-control" id="extenso" required>
                         </div>
 
                         <div class="col-md-2 mb-3">
                             <label><strong>Referente à</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="referente" data-toggle="tooltip" title="Item vendido" data-placement="bottom" readonly type="text"  class="form-control" id="referente" required>
+                            <input name="referente" onkeydown="autofill()" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente" required>
                         </div>
                         <div align ='center'>
                             <div class="col-md-10 mb-3">
@@ -158,59 +158,86 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input name="valorcompra" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" readonly type="number"  class="form-control" id="valorcompra" required>
+                                <input name="valorcompra2" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom"  type="text"  class="form-control" id="valorcompra2" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Recebemos de</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="nomecli" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom" readonly type="text"  class="form-control" id="nomecli" required>
+                            <input name="nomecli2" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli2" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>CNPJ</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="cnpj" data-toggle="tooltip" title="CNPJ do Cliente" data-placement="bottom" readonly type="text"  class="form-control" id="cnpj" required>
+                            <input name="cnpj2" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" data-toggle="tooltip" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj2" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Expositor</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="expositor" data-toggle="tooltip" title="Expositor" data-placement="bottom" readonly type="text"  class="form-control" id="expositor" required>
+                            <input name="expositor2" data-toggle="tooltip" title="Expositor" data-placement="bottom"  type="text"  class="form-control" id="expositor2" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Valor por extenso</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="extenso" data-toggle="tooltip" title="Valor por Extenso" data-placement="bottom" readonly type="text"  class="form-control" id="extenso" required>
+                            <input name="extenso2" data-toggle="tooltip" title="Valor por Extenso" data-placement="bottom"  type="text"  class="form-control" id="extenso2" required>
                         </div>
 
                         <div class="col-md-2 mb-3">
                             <label><strong>Referente à</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="referente" data-toggle="tooltip" title="Item vendido" data-placement="bottom" readonly type="text"  class="form-control" id="referente" required>
+                            <input name="referente2" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente2" required>
                         </div>
                         <div align ='center'>
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>no evento LABACE 2018, a ser realizado de 14 a 16 de agosto
                                     de 2018 no AEROPORTO DE CONGONHAS, localizado a Rua Tamoios, 361, São Paulo/SP - Brasil						
                                 </p>
-
                             </div>
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>IMPORTANTE A NF-e DE PRESTAÇÃO DE SERVIÇOS SERÁ EMITIDA E ENVIADA EM ATÉ 5 DIAS ÚTEIS AO CNPJ DECLARADO ACIMA.</p>
                             </div>
                             <label><strong>São Paulo, 28 de setembro de 2018</strong></label>
                         </div>
-
                     </div>
                 </div>
             </div>
         </form>
-
     </body>
 
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.maskMoney.js"></script>
+    <script src="js/mascaraCNPJ.js"></script>
+    <script>
+        
+        function autofill(){
+            
+          document.getElementById('valorcompra2').value = document.getElementById('valorcompra').value;
+          document.getElementById('nomecli2').value = document.getElementById('nomecli').value;
+          document.getElementById('cnpj2').value = document.getElementById('cnpj').value;
+          document.getElementById('extenso2').value = document.getElementById('extenso').value;
+          document.getElementById('expositor2').value = document.getElementById('expositor').value;
+          document.getElementById('referente2').value = document.getElementById('referente').value;
+            
+        }
+        
+    </script>
+
+    <script>
+        $(function () {
+            $('#valorcompra').maskMoney();
+            $('#valorcompra2').maskMoney();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cnpj").mask("99.999.999/9999-99");
+        });
+    </script>
 
 </html>
