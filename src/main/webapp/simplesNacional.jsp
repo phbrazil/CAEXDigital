@@ -50,7 +50,7 @@
                             <div align ="center">
                                 <label><strong>Cliente Optante Simples Nacional?</strong></label></span>
                                 <br>
-                                <select name = "optante" class="custom-select d-block w-100" id="optante" >
+                                <select name = "optanteUser" class="custom-select d-block w-100" id="optanteUser" >
                                     <option selected>Não sabe</option>
                                     <option>Sim</option>
                                     <option>Não</option>
@@ -67,10 +67,10 @@
                     </div>
                     <br>
                     <label><strong>Razão Social</strong></label>
-                    <input readonly class="form-control form-control-dark w-100" type="text"  name ="nome_empresarial" id = "nome_empresarial" required>
+                    <input readonly class="form-control form-control-dark w-100" type="text"  name ="razaoSocial" id = "nome_empresarial" required>
                     <br>
                     <label><strong>Simples Nacional</strong></label>
-                    <input readonly class="form-control form-control-dark w-100" type="text"  name ="situacao_simples_nacional" id = "situacao_simples_nacional" required>
+                    <input readonly class="form-control form-control-dark w-100" type="text"  id = "situacao_simples_nacional" name="optante" required>
 
                     <br>
                     <button  type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="chevrons-right"></span>Avançar</strong></button>
@@ -83,28 +83,96 @@
             </div>
         </form>
 
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/mascaraCNPJ.js"></script>
-        <script src="js/jquery-1.2.6.pack.js"></script>
-        <script src="js/jquery.maskedinput-1.1.4.pack.js"></script>
-        <script src="js/consultaSN.js"></script>
-
-
-        <!--script src="js/jquery.js"></script-->
-
-        <script type="text/javascript">
-                                    $(document).ready(function () {
-                                        $("#cnpj").mask("99.999.999/9999-99");
-                                    });
-        </script>
-
-        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-        <script>
-                                    feather.replace();
-        </script>
-
     </body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--script language="JavaScript" type="text/javascript" src="js/consultaSN.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.2.6.pack.js"></script>
+    <script src="js/jquery.maskedinput-1.1.4.pack.js"></script>
+    <script src="js/mascaraCNPJ.js"></script>
+
+
+    <!--script src="js/jquery.js"></script-->
+
+    <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $("#cnpj").mask("99.999.999/9999-99");
+                                });
+    </script>
+
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+                                feather.replace();
+    </script>
+
+    <script>
+        //////
+
+        function limpa_formulário_CNPJ() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('nome_empresarial').value = ("");
+            document.getElementById('situacao_simples_nacional').value = ("");
+        }
+
+        function Resultado(conteudo) {
+
+            if (!("ERROR" in conteudo)) {
+
+                document.getElementById('nome_empresarial').value = (conteudo.nome);
+                document.getElementById('situacao_simples_nacional').value = (conteudo.data_situacao);
+
+            } else {
+                alert("Não encontrado");
+            }
+        }
+
+        function simplesNacional(valor) {
+
+            //Nova variável "cep" somente com dígitos.
+            var cnpj = valor.replace(/\D/g, '');
+            cnpj = cnpj.replace(".", '');
+            cnpj = cnpj.replace("-", '');
+            cnpj = cnpj.replace("/", '');
+            //Verifica se campo cep possui valor informado.
+            if (cnpj != "") {
+
+                //Expressão regular para validar o CNPJ.
+                var validacpnj = /^[0-9]{14}$/;
+                //Valida o formato do cnpj.
+                if (validacpnj.test(cnpj)) {
+
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('nome_empresarial').value = "Pesquisando...";
+                    document.getElementById('situacao_simples_nacional').value = "Pesquisando...";
+                    var script = document.createElement('script');
+
+                    //Sincroniza com o callback.
+                    // script.src = 'https://www.sintegraws.com.br/api/v1/execute-api.php?token=DC84AF16-E5A1-49F2-98F0-CFDA1C5F930B&cnpj='+valor+'&plugin=SN?callback=Resultado';
+
+                    script.src = 'https://www.receitaws.com.br/v1/cnpj/' + cnpj + '?callback=Resultado';
+
+                    //00623904000335
+
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+
+                } //end if.
+
+                else {
+                    alert("Formato de CNPJ inválido.");
+                    limpa_formulário_CNPJ();
+                }
+            } //end if.
+
+            else {
+                //alert("Formato de CNPJ inválido.");
+                limpa_formulário_CNPJ();
+            }
+        }
+        ;
+    </script>
+
 </html>
