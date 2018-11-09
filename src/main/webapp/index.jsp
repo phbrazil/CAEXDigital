@@ -56,7 +56,7 @@
             </h5>
             <br>
             <label for="inputEmail" class="sr-only">Email</label>
-            <input type="email" autocomplete="off" id="inputEmail" class="form-control" placeholder="Email address" name = "username" required autofocus>
+            <input type="email" autocomplete="off" id="inputEmail" class="form-control" placeholder="Email address" name = "userName" required autofocus>
             <label for="inputPassword" class="sr-only">Senha</label>
             <input type="password" autocomplete="off" id="inputPassword" class="form-control" placeholder="Password" name = "password" required>
             <button class="btn btn-lg btn-secondary btn-block" type="submit">Entrar</button>

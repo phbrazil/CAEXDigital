@@ -18,10 +18,17 @@ function Resultado(conteudo) {
     }
 }
 
-function pesquisacpnj(valor) {
-
+function pesquisaCNPJ(valor) {
+    
+    console.log(valor);
+    
     //Nova variável "cep" somente com dígitos.
     var cnpj = valor.replace(/\D/g, '');
+    cnpj = cnpj.replace(".", '');
+    cnpj = cnpj.replace("-", '');
+    cnpj = cnpj.replace("/", '');
+    alert(cnpj);
+    console.log(cnpj);
     //Verifica se campo cep possui valor informado.
     if (cnpj != "") {
 

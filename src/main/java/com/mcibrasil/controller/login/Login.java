@@ -92,10 +92,10 @@ public class Login extends HttpServlet {
                 }
 
             }
-            sessao.setAttribute("nomeUser", primeironome);
+            sessao.setAttribute("primeiroNome", primeironome);
             sessao.setAttribute("emailUser", user.get(0).getEmailUser());
-            sessao.setAttribute("nomeUser", user.get(0).getNomeUser());
-            
+            sessao.setAttribute("sessaoid", sessao.getId());
+
             request.getRequestDispatcher("home.jsp").forward(request, response);
 
         } else {
