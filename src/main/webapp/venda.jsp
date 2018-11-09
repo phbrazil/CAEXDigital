@@ -3,6 +3,9 @@
  * @author paulo.bezerra
  *-->
 
+<%    HttpSession sessao = request.getSession();
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -40,11 +43,11 @@
             <br>
 
             <h2 >Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h2>
-            <h4 >Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h4>
+            <h5 >Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h5>
             <div class="col-md-7 order-md-1">
 
                 <div class="inner">
-                    <form name = "venda" action="${pageContext.request.contextPath}/venda" method="POST">
+                    <!--form name = "venda" action="${pageContext.request.contextPath}/venda" method="POST"-->
                         <div class="row">
                             <div class="col-md-7 mb-3">
                                 <label><strong>Item vendido</strong></label>
@@ -59,7 +62,7 @@
 
                         </div>
                         <button type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="chevrons-right"></span>Adicionar</strong></button>
-                    </form>
+                    <!--/form-->
 
                     <div align="right">
                         <form name = "finalizarVenda" action="${pageContext.request.contextPath}/finalizarVenda" method="POST">

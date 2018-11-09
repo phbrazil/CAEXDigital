@@ -76,13 +76,13 @@
                             <label><strong>Recebemos de</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="nomecli" onkeydown="autofill()" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli" required>
+                            <input readonly value="${razaoSocial}" name="razoaoSocial" onkeydown="autofill()" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>CNPJ</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="cnpj" onkeyup="autofill()" data-toggle="tooltip" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj" required>
+                            <input  readonly name="cnpj" value="${cnpj}" onkeyup="autofill()" data-toggle="tooltip" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Expositor</strong></label>
@@ -165,13 +165,13 @@
                             <label><strong>Recebemos de</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="nomecli2" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli2" required>
+                            <input readonly value = "${razaoSocial}" name="nomecli2" data-toggle="tooltip" title="Nome do Cliente" data-placement="bottom"  type="text"  class="form-control" id="nomecli2" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>CNPJ</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="cnpj2" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" data-toggle="tooltip" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj2" required>
+                            <input readonly value = "${cnpj}" name="cnpj2" onkeydown="javascript: fMasc(this, mCNPJ);" maxlength="18" data-toggle="tooltip" title="CNPJ do Cliente" data-placement="bottom"  type="text"  class="form-control" id="cnpj2" required>
                         </div>
                         <div class="col-md-2 mb-3">
                             <label><strong>Expositor</strong></label>

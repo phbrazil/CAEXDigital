@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mcibrasil.controller.venda;
+package com.mcibrasil.controller.finalizarVenda;
 
 import com.mcibrasil.controller.login.*;
 import com.mcibrasil.model.user.tbUser;
@@ -27,8 +27,8 @@ import org.hibernate.cfg.Configuration;
  *
  * @author paulo.bezerra
  */
-@WebServlet(name = "/venda", urlPatterns = {"/venda"})
-public class venda extends HttpServlet {
+@WebServlet(name = "/finalizarVenda", urlPatterns = {"/finalizarVenda"})
+public class finalizarVenda extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -45,17 +45,12 @@ public class venda extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         HttpSession sessao = request.getSession();
-        
-        String optante = request.getParameter("optante");
-        String razaoSocial = request.getParameter("razaoSocial");
-        String cnpj = request.getParameter("cnpj");
-        
-        
 
-        sessao.setAttribute("optante", optante);
-        sessao.setAttribute("razaoSocial", razaoSocial);
-        sessao.setAttribute("cnpj", cnpj);
-        request.getRequestDispatcher("venda.jsp").forward(request, response);
+        String razaoSocial = request.getParameter("razaoSocial");
+
+        //sessao.setAttribute("sessaoid", sessao.getId());
+
+        request.getRequestDispatcher("recibo.jsp").forward(request, response);
 
     }
 
