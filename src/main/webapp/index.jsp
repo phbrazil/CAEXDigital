@@ -62,7 +62,7 @@
             <button class="btn btn-lg btn-secondary btn-block" type="submit">Entrar</button>
             <p></p>
             <label>
-                <a href ="Modal?mensagem=Favor enviar um email para <strong>paulo.bezerra@mci-group.com</strong>&path=index.jsp">Esqueci a senha</a>
+                <a href ="modal?mensagem=Favor enviar um email para <strong>paulo.bezerra@mci-group.com</strong>&path=index.jsp">Esqueci a senha</a>
             </label>
 
             <p class="mt-5 mb-3 text-muted">&copy; MCI Brasil</p>

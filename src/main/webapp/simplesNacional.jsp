@@ -44,7 +44,7 @@
 
                 <br>
 
-                <div class="col-md-5 order-md-1">
+                <div class="col-md-8 order-md-1">
                     <div class="inner">
                         <div class="row">
                             <div align ="center">

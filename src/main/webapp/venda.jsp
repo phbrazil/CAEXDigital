@@ -52,15 +52,15 @@
                         <div class="row">
                             <div class="col-md-7 mb-3">
                                 <label><strong>Item vendido</strong></label>
-                                <input class="form-control form-control-dark w-100" type="text"  id = "item_venda" name="itemVenda" required>
+                                <input data-toggle="tooltip" title="Escreva o Nome do Item vendido" class="form-control form-control-dark w-100" type="text"  id = "item_venda" name="itemVenda" required>
                             </div>
                             <div class="col-md-2 mb-3">
                                 <label><strong>Valor item</strong></label>
-                                <input class="form-control form-control-dark w-100" type="text"  id = "valor" name="valor" required>
+                                <input data-toggle="tooltip" title="Digite o Valor do Item vendido" class="form-control form-control-dark w-100" type="text"  id = "valor" name="valor" required>
                             </div>
                             <div class="col-md-2 mb-3">
                                 <label><strong>Valor total</strong></label>
-                                <input readonly class="form-control form-control-dark w-100" type="text"  id = "valorTotal" name="valorTotal" required>
+                                <input  readonly  class="form-control form-control-dark w-100" type="text"  id = "valorTotal" name="valorTotal" required>
                             </div>
                             <br>
 
