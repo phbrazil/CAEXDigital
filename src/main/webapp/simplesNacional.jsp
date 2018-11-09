@@ -64,12 +64,12 @@
                                 <input autocomplete="off" class="form-control form-control-dark w-100" id="cnpj" type="text" onblur="simplesNacional(this.value)" aria-label="Search" name ="cnpj" required/>
                             </div>
                             <br>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-8 mb-3">
                                 <label><strong>Razão Social</strong></label>
                                 <input readonly class="form-control form-control-dark w-100" type="text"  name ="razaoSocial" id = "nome_empresarial" required>
                             </div>
                             <br>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-4 mb-3">
 
                                 <label><strong>Simples Nacional</strong></label>
                                 <input readonly class="form-control form-control-dark w-100" type="text"  id = "situacao_simples_nacional" name="optante" required>
