@@ -28,6 +28,9 @@
 
         <!-- Bootstrap core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+        <link rel="stylesheet" type="text/css" href="css/loading-btn.css"/>
+
 
         <!-- Custom styles for this template -->
         <link href="css/signin.css" rel="stylesheet">
@@ -42,7 +45,7 @@
                     max-width: 100%;
                     /*border: 20px solid #ff0080;
                     padding: 20px;*/
-                    
+
                 }
 
             </style>
@@ -59,7 +62,11 @@
             <input type="email" autocomplete="off" id="inputEmail" class="form-control" placeholder="Email address" name = "userName" required autofocus>
             <label for="inputPassword" class="sr-only">Senha</label>
             <input type="password" autocomplete="off" id="inputPassword" class="form-control" placeholder="Password" name = "password" required>
-            <button class="btn btn-lg btn-secondary btn-block" type="submit">Entrar</button>
+            <div id = 'entrar' class="btn btn-default ld-ext-bottom">
+                <button class="btn btn-lg btn-secondary btn-block" onclick="loading()" type="submit">Entrar</button>
+                <div class="ld ld-ring ld-spin-fast"></div>
+            </div>
+
             <p></p>
             <label>
                 <a href ="modal?mensagem=Favor enviar um email para <strong>paulo.bezerra@mci-group.com</strong>&path=index.jsp">Esqueci a senha</a>
@@ -68,6 +75,17 @@
             <p class="mt-5 mb-3 text-muted">&copy; MCI Brasil</p>
         </form>
     </body>
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+
+                    function loading() {
+
+                        $('#entrar').addClass('running');
+
+                    }
+    </script>
 
 
 </html>
