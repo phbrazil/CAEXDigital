@@ -96,8 +96,6 @@ public class Login extends HttpServlet {
             sessao.setAttribute("emailUser", user.get(0).getEmailUser());
             sessao.setAttribute("nomeUser", user.get(0).getNomeUser());
             
-            System.out.println(user.get(0).getId());
-
             request.getRequestDispatcher("home.jsp").forward(request, response);
 
         } else {

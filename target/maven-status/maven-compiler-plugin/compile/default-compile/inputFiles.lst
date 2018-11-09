@@ -1,4 +1,8 @@
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\login\Login.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\login\Logout.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\modal\modal.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\NonexistentEntityException.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\tbUserJpaController.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\IllegalOrphanException.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\PreexistingEntityException.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\tbUser.java
