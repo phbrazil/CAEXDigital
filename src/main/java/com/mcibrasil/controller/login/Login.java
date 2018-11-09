@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
 
             //inicia a transacao com o banco
             Transaction tx = session.beginTransaction();
-            String hql = "from tbUser where emailCliente = '" + emailCliente + "' and passwordCliente ='" + passwordCliente + "'";
+            String hql = "from tbUser where emailUser = '" + emailCliente + "' and passwordUser ='" + passwordCliente + "'";
             user = session.createQuery(hql).list();
 
             //comita as informacoes
@@ -94,7 +94,7 @@ public class Login extends HttpServlet {
             }
             sessao.setAttribute("nomeUser", primeironome);
             sessao.setAttribute("emailUser", user.get(0).getEmailUser());
-            sessao.setAttribute("idUser", user.get(0).getId());
+            sessao.setAttribute("nomeUser", user.get(0).getNomeUser());
             
             System.out.println(user.get(0).getId());
 
