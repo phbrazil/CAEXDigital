@@ -15,7 +15,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Vendas Services</title>
+        <title>Recibo Venda</title>
 
         <!-- Bootstrap core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +69,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input name="valorcompra" onkeydown="autofill()" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" type="text"  class="form-control" id="valorcompra" required>
+                                <input readonly value= "${valor}" name="valorcompra" onkeydown="autofill()" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" type="text"  class="form-control" id="valorcompra" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">
@@ -101,7 +101,7 @@
                             <label><strong>Referente à</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="referente" onkeydown="autofill()" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente" required>
+                            <input readonly value="${itemVenda}" name="referente" onkeydown="autofill()" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente" required>
                         </div>
                         <div align ='center'>
                             <div class="col-md-10 mb-3">
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input name="valorcompra2" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom"  type="text"  class="form-control" id="valorcompra2" required>
+                                <input readonly value= "${valor}" name="valorcompra2" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom"  type="text"  class="form-control" id="valorcompra2" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">
@@ -190,7 +190,7 @@
                             <label><strong>Referente à</strong></label>
                         </div>
                         <div class="col-md-9 mb-3">
-                            <input name="referente2" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente2" required>
+                            <input readonly value="${itemVenda}" name="referente2" data-toggle="tooltip" title="Item vendido" data-placement="bottom"  type="text"  class="form-control" id="referente2" required>
                         </div>
                         <div align ='center'>
                             <div class="col-md-10 mb-3">

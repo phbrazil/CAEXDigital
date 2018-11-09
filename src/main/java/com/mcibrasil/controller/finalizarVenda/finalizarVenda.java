@@ -46,10 +46,14 @@ public class finalizarVenda extends HttpServlet {
 
         HttpSession sessao = request.getSession();
 
-        String razaoSocial = request.getParameter("razaoSocial");
+        String valor = request.getParameter("valor");
+        String valorTotal = request.getParameter("valorTotal");
+        String itemVenda = request.getParameter("itemVenda");
 
-        //sessao.setAttribute("sessaoid", sessao.getId());
-
+        request.setAttribute("valor", valor);
+        request.setAttribute("valorTotal", valorTotal);
+        request.setAttribute("itemVenda", itemVenda);
+        
         request.getRequestDispatcher("recibo.jsp").forward(request, response);
 
     }

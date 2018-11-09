@@ -42,34 +42,37 @@
         <div align ="center">
             <br>
 
-            <h2 >Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h2>
-            <h5 >Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h5>
-            <div class="col-md-7 order-md-1">
-
-                <div class="inner">
-                    <!--form name = "venda" action="${pageContext.request.contextPath}/venda" method="POST"-->
+            <h3 class="text-muted">Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h3>
+            <h5 class="text-muted">Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h5>
+            <br>
+            <div class="col-md-8 order-md-1">
+                <form name = "finalizarVenda" action="${pageContext.request.contextPath}/finalizarVenda" method="POST" target="_blank">
+                    <div class="inner">
+                        <!--form name = "venda" action="${pageContext.request.contextPath}/venda" method="POST"-->
                         <div class="row">
                             <div class="col-md-7 mb-3">
                                 <label><strong>Item vendido</strong></label>
-                                <input class="form-control form-control-dark w-100" type="text"  id = "item_venda" name="item_venda" required>
+                                <input class="form-control form-control-dark w-100" type="text"  id = "item_venda" name="itemVenda" required>
                             </div>
-                            <div class="col-md-3 mb-3">
-
-                                <label><strong>Valor</strong></label>
+                            <div class="col-md-2 mb-3">
+                                <label><strong>Valor item</strong></label>
                                 <input class="form-control form-control-dark w-100" type="text"  id = "valor" name="valor" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label><strong>Valor total</strong></label>
+                                <input readonly class="form-control form-control-dark w-100" type="text"  id = "valorTotal" name="valorTotal" required>
                             </div>
                             <br>
 
                         </div>
-                        <button type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="chevrons-right"></span>Adicionar</strong></button>
-                    <!--/form-->
+                        <button type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="plus-circle"></span>Adicionar item</strong></button>
+                        <!--/form-->
 
-                    <div align="right">
-                        <form name = "finalizarVenda" action="${pageContext.request.contextPath}/finalizarVenda" method="POST">
+                        <div align="right">
                             <button type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="check"></span>Finalizar Venda</strong></button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
 
             <footer class="my-5 pt-5 text-muted text-center text-small">

@@ -51,7 +51,7 @@
             <br>
             <br>
             <img class="mb-4" src="img/mci_logo.png" alt="logo MCI">
-            <h5 class="mb-0">Welcome to 
+            <h5 class="mb-0">Bem-vindo ao 
                 <span style = "color: #ff0080">CAEX Digital</span>
             </h5>
             <br>

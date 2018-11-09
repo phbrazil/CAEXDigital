@@ -3,6 +3,8 @@ C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcib
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\modal\modal.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\NonexistentEntityException.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\tbUserJpaController.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\venda\venda.java
+C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\controller\finalizarVenda\finalizarVenda.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\IllegalOrphanException.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\exceptions\PreexistingEntityException.java
 C:\Users\ASAPH-001\Documents\NetBeansProjects\CAEXDigital\src\main\java\com\mcibrasil\model\user\tbUser.java

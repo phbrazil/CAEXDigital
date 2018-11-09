@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger fonte" style="text-decoration:none; color: white;" href="Logout.jsp">Sair</a>
+                    <a class="nav-link js-scroll-trigger fonte" style="text-decoration:none; color: white;" href="logOut.jsp">Sair</a>
 
                 </li>
                 <li class ="nav-item" align = "right">

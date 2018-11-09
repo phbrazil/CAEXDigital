@@ -40,7 +40,7 @@
             <div align ="center">
                 <br>
 
-                <h2 >Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h2>
+                <h3 class="text-muted">Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h3>
 
                 <br>
 

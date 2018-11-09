@@ -50,8 +50,6 @@ public class simplesNacional extends HttpServlet {
 
         sessao.setAttribute("estado", estado);
         
-        System.out.println(estado+"+++++++++++++=");
-
         request.getRequestDispatcher("simplesNacional.jsp").forward(request, response);
 
     }
