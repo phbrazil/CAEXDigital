@@ -18,7 +18,7 @@ function Resultado(conteudo) {
     }
 }
 
-function pesquisaCNPJ(valor) {
+function simplesNacional(valor) {
     
     console.log(valor);
     

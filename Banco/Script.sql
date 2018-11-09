@@ -14,5 +14,6 @@ changePassword boolean NOT NULL,
 PRIMARY KEY (id));
 
 insert into tbUser(emailUser,nomeUser,passwordUser,changePassword) values ('paulo.bezerra@mci-group.com','Paulo Bezerra','0c24a188a9',false);
+insert into tbUser(emailUser,nomeUser,passwordUser,changePassword) values ('glaucia.moraes@mci-group.com','Glaucia Moraes','0c24a188a9',false);
 
 

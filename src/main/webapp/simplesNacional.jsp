@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label><strong>Digite o CNPJ</strong></label>
-                                <input autocomplete="off" class="form-control form-control-dark w-100" id="cnpj" type="text" onblur="pesquisaCNPJ(this.value)" aria-label="Search" name ="cnpj" required/>
+                                <input autocomplete="off" class="form-control form-control-dark w-100" id="cnpj" type="text" onblur="simplesNacional(this.value)" aria-label="Search" name ="cnpj" required/>
                             </div>
                         </div>
                     </div>
@@ -87,26 +87,24 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/CEP.js"></script>
         <script src="js/mascaraCNPJ.js"></script>
         <script src="js/jquery-1.2.6.pack.js"></script>
         <script src="js/jquery.maskedinput-1.1.4.pack.js"></script>
-        <script src="js/confirmCompleteCliente.js"></script>
-        <script src="js/jquery.autocomplete.js"></script>
-        <script src="js/SimplesNacional.js"></script>
+        <script src="js/consultaSN.js"></script>
 
 
         <!--script src="js/jquery.js"></script-->
 
         <script type="text/javascript">
-                                              $(document).ready(function () {
-                                                  $("#cnpj").mask("99.999.999/9999-99");
-                                              });
+                                    $(document).ready(function () {
+                                        $("#cnpj").mask("99.999.999/9999-99");
+                                    });
         </script>
 
         <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
         <script>
-                                              feather.replace();
+                                    feather.replace();
         </script>
+
     </body>
 </html>
