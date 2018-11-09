@@ -47,7 +47,7 @@
                 <div class="col-md-8 order-md-1">
                     <div class="inner">
                         <div class="row">
-                            <div align ="center">
+                            <div class="col-md-6 mb-3">
                                 <label><strong>Cliente Optante Simples Nacional?</strong></label></span>
                                 <br>
                                 <select name = "optanteUser" class="custom-select d-block w-100" id="optanteUser" >
@@ -63,116 +63,118 @@
                                 <label><strong>Digite o CNPJ</strong></label>
                                 <input autocomplete="off" class="form-control form-control-dark w-100" id="cnpj" type="text" onblur="simplesNacional(this.value)" aria-label="Search" name ="cnpj" required/>
                             </div>
-                        </div>
+                            <br>
+                            <div class="col-md-6 mb-3">
+                                <label><strong>Razão Social</strong></label>
+                                <input readonly class="form-control form-control-dark w-100" type="text"  name ="razaoSocial" id = "nome_empresarial" required>
+                            </div>
+                            <br>
+                            <div class="col-md-6 mb-3">
+
+                                <label><strong>Simples Nacional</strong></label>
+                                <input readonly class="form-control form-control-dark w-100" type="text"  id = "situacao_simples_nacional" name="optante" required>
+                            </div>
+                            <br>
+                            <button  type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="chevrons-right"></span>Avançar</strong></button>
+
+                        </div>        
+
+                        <footer class="my-5 pt-5 text-muted text-center text-small">
+                            <p class="mb-1">&copy; MCI Brasil</p>
+                        </footer>
                     </div>
-                    <br>
-                    <label><strong>Razão Social</strong></label>
-                    <input readonly class="form-control form-control-dark w-100" type="text"  name ="razaoSocial" id = "nome_empresarial" required>
-                    <br>
-                    <label><strong>Simples Nacional</strong></label>
-                    <input readonly class="form-control form-control-dark w-100" type="text"  id = "situacao_simples_nacional" name="optante" required>
+                    </form>
 
-                    <br>
-                    <button  type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="chevrons-right"></span>Avançar</strong></button>
+                    </body>
 
-                </div>        
-
-                <footer class="my-5 pt-5 text-muted text-center text-small">
-                    <p class="mb-1">&copy; MCI Brasil</p>
-                </footer>
-            </div>
-        </form>
-
-    </body>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--script language="JavaScript" type="text/javascript" src="js/consultaSN.js"></script-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.2.6.pack.js"></script>
-    <script src="js/jquery.maskedinput-1.1.4.pack.js"></script>
-    <script src="js/mascaraCNPJ.js"></script>
+                    <!-- Bootstrap core JavaScript
+                    ================================================== -->
+                    <!-- Placed at the end of the document so the pages load faster -->
+                    <!--script language="JavaScript" type="text/javascript" src="js/consultaSN.js"></script-->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+                    <script src="js/jquery-1.2.6.pack.js"></script>
+                    <script src="js/jquery.maskedinput-1.1.4.pack.js"></script>
+                    <script src="js/mascaraCNPJ.js"></script>
 
 
-    <!--script src="js/jquery.js"></script-->
+                    <!--script src="js/jquery.js"></script-->
 
-    <script type="text/javascript">
-                                $(document).ready(function () {
-                                    $("#cnpj").mask("99.999.999/9999-99");
-                                });
-    </script>
+                    <script type="text/javascript">
+                                    $(document).ready(function () {
+                                        $("#cnpj").mask("99.999.999/9999-99");
+                                    });
+                    </script>
 
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script>
-                                feather.replace();
-    </script>
+                    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+                    <script>
+                                    feather.replace();
+                    </script>
 
-    <script>
-        //////
+                    <script>
+                        //////
 
-        function limpa_formulário_CNPJ() {
-            //Limpa valores do formulário de cep.
-            document.getElementById('nome_empresarial').value = ("");
-            document.getElementById('situacao_simples_nacional').value = ("");
-        }
+                        function limpa_formulário_CNPJ() {
+                            //Limpa valores do formulário de cep.
+                            document.getElementById('nome_empresarial').value = ("");
+                            document.getElementById('situacao_simples_nacional').value = ("");
+                        }
 
-        function Resultado(conteudo) {
+                        function Resultado(conteudo) {
 
-            if (!("ERROR" in conteudo)) {
+                            if (!("ERROR" in conteudo)) {
 
-                document.getElementById('nome_empresarial').value = (conteudo.nome);
-                document.getElementById('situacao_simples_nacional').value = (conteudo.data_situacao);
+                                document.getElementById('nome_empresarial').value = (conteudo.nome);
+                                document.getElementById('situacao_simples_nacional').value = (conteudo.data_situacao);
 
-            } else {
-                alert("Não encontrado");
-            }
-        }
+                            } else {
+                                alert("Não encontrado");
+                            }
+                        }
 
-        function simplesNacional(valor) {
+                        function simplesNacional(valor) {
 
-            //Nova variável "cep" somente com dígitos.
-            var cnpj = valor.replace(/\D/g, '');
-            cnpj = cnpj.replace(".", '');
-            cnpj = cnpj.replace("-", '');
-            cnpj = cnpj.replace("/", '');
-            //Verifica se campo cep possui valor informado.
-            if (cnpj != "") {
+                            //Nova variável "cep" somente com dígitos.
+                            var cnpj = valor.replace(/\D/g, '');
+                            cnpj = cnpj.replace(".", '');
+                            cnpj = cnpj.replace("-", '');
+                            cnpj = cnpj.replace("/", '');
+                            //Verifica se campo cep possui valor informado.
+                            if (cnpj != "") {
 
-                //Expressão regular para validar o CNPJ.
-                var validacpnj = /^[0-9]{14}$/;
-                //Valida o formato do cnpj.
-                if (validacpnj.test(cnpj)) {
+                                //Expressão regular para validar o CNPJ.
+                                var validacpnj = /^[0-9]{14}$/;
+                                //Valida o formato do cnpj.
+                                if (validacpnj.test(cnpj)) {
 
-                    //Preenche os campos com "..." enquanto consulta webservice.
-                    document.getElementById('nome_empresarial').value = "Pesquisando...";
-                    document.getElementById('situacao_simples_nacional').value = "Pesquisando...";
-                    var script = document.createElement('script');
+                                    //Preenche os campos com "..." enquanto consulta webservice.
+                                    document.getElementById('nome_empresarial').value = "Pesquisando...";
+                                    document.getElementById('situacao_simples_nacional').value = "Pesquisando...";
+                                    var script = document.createElement('script');
 
-                    //Sincroniza com o callback.
-                    // script.src = 'https://www.sintegraws.com.br/api/v1/execute-api.php?token=DC84AF16-E5A1-49F2-98F0-CFDA1C5F930B&cnpj='+valor+'&plugin=SN?callback=Resultado';
+                                    //Sincroniza com o callback.
+                                    // script.src = 'https://www.sintegraws.com.br/api/v1/execute-api.php?token=DC84AF16-E5A1-49F2-98F0-CFDA1C5F930B&cnpj='+valor+'&plugin=SN?callback=Resultado';
 
-                    script.src = 'https://www.receitaws.com.br/v1/cnpj/' + cnpj + '?callback=Resultado';
+                                    script.src = 'https://www.receitaws.com.br/v1/cnpj/' + cnpj + '?callback=Resultado';
 
-                    //00623904000335
+                                    //00623904000335
 
-                    //Insere script no documento e carrega o conteúdo.
-                    document.body.appendChild(script);
+                                    //Insere script no documento e carrega o conteúdo.
+                                    document.body.appendChild(script);
 
-                } //end if.
+                                } //end if.
 
-                else {
-                    alert("Formato de CNPJ inválido.");
-                    limpa_formulário_CNPJ();
-                }
-            } //end if.
+                                else {
+                                    alert("Formato de CNPJ inválido.");
+                                    limpa_formulário_CNPJ();
+                                }
+                            } //end if.
 
-            else {
-                //alert("Formato de CNPJ inválido.");
-                limpa_formulário_CNPJ();
-            }
-        }
-        ;
-    </script>
+                            else {
+                                //alert("Formato de CNPJ inválido.");
+                                limpa_formulário_CNPJ();
+                            }
+                        }
+                        ;
+                    </script>
 
-</html>
+                    </html>
