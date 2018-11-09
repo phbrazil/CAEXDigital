@@ -33,7 +33,7 @@
         <link href="css/signin.css" rel="stylesheet">
     </head>
 
-    <body class="text-center" style="background-color: white;">
+    <body class="text-center" style="background-color: #FFE6EE ;">
         <form class="form-signin" action="Login"  method="POST">
             <input type="hidden" name ="mobile" value ="<%=mobile%>">
 

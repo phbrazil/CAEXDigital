@@ -65,7 +65,7 @@
                             <br>
 
                         </div>
-                        <button type="submit" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="plus-circle"></span>Adicionar item</strong></button>
+                        <button type="button" name = "type" class = "buttonbranco" value = "Won"><strong><span data-feather="plus-circle"></span>Adicionar item</strong></button>
                         <!--/form-->
 
                         <div align="right">
