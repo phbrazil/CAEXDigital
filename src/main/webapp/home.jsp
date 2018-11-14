@@ -68,7 +68,7 @@
                             <select name = "estado" class="custom-select d-block w-100" id="estado" >
                                 <option selected>São Paulo</option>
                                 <option>Rio de Janeiro</option>
-                                <option>Minas Gerais</option>
+                                <option>Porto Alegre</option>
                             </select>
                             <div class="invalid-feedback">
                                 Favor selecionar o Ano..

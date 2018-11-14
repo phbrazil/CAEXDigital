@@ -45,12 +45,70 @@ public class venda extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         HttpSession sessao = request.getSession();
-        
+
+        double irrf =0;
+        double csll = 0;
+        double cofins = 0;
+        double pis = 0;
+        double iss = 0;
+
         String optante = request.getParameter("optante");
         String razaoSocial = request.getParameter("razaoSocial");
         String cnpj = request.getParameter("cnpj");
+        String estado = (String) sessao.getAttribute("estado");
+
+        if (estado.equals("São Paulo") && optante.equals("Não Optante")) {
+            
+            irrf = 1.5;
+            csll = 1.0;
+            cofins = 3.0;
+            pis = 0.65;
+            iss = 2.50;
+
+        } else if (estado.equals("São Paulo") && optante.equals("Optante")) {
+            irrf = 1.5;
+            csll = 0.0;
+            cofins = 0.0;
+            pis = 0.0;
+            iss = 5.0;
+
+        } else if (estado.equals("Rio de Janeiro") && optante.equals("Não Optante")) {
+            irrf = 1.5;
+            csll = 1.0;
+            cofins = 3.0;
+            pis = 0.65;
+            iss = 5.0;
+
+        } else if (estado.equals("Rio de Janeiro") && optante.equals("Optante")) {
+            irrf = 1.5;
+            csll = 0.0;
+            cofins = 0.0;
+            pis = 0.0;
+            iss = 5.0;
+
+        } else if (estado.equals("Porto Alegre") && optante.equals("Não Optante")) {
+            irrf = 1.5;
+            csll = 1.0;
+            cofins = 3.0;
+            pis = 0.65;
+            iss = 5.0;
+
+        } else if (estado.equals("Porto Alegre") && optante.equals("Optante")) {
+            irrf = 1.5;
+            csll = 0.0;
+            cofins = 0.0;
+            pis = 0.0;
+            iss = 5.0;
+        }
+
         
-        
+        System.out.println(irrf+"+++++++++++");
+
+        request.setAttribute("irrf", irrf);
+        request.setAttribute("csll", csll);
+        request.setAttribute("cofins", cofins);
+        request.setAttribute("pis", pis);
+        request.setAttribute("iss", iss);
 
         sessao.setAttribute("optante", optante);
         sessao.setAttribute("razaoSocial", razaoSocial);

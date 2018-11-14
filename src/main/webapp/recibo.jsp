@@ -113,7 +113,7 @@
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>IMPORTANTE A NF-e DE PRESTAÇÃO DE SERVIÇOS SERÁ EMITIDA E ENVIADA EM ATÉ 5 DIAS ÚTEIS AO CNPJ DECLARADO ACIMA.</p>
                             </div>
-                            <label><strong>São Paulo, <input id='dd' class="col-md-2 mb-1" style="border: none;"> de <input id='mm' class="col-md-3 mb-1" style="border: none;"> de <input id='yy' class="col-md-3 mb-1" style="border: none;"></strong></label>
+                            <label><strong>${estado}, <input id='dd' class="col-md-2 mb-1" style="border: none;"> de <input id='mm' class="col-md-3 mb-1" style="border: none;"> de <input id='yy' class="col-md-3 mb-1" style="border: none;"></strong></label>
                         </div>
 
                     </div>
@@ -201,7 +201,7 @@
                             <div class="col-md-10 mb-3">
                                 <p class="round1" style='color: black;font-size:14px;'>IMPORTANTE A NF-e DE PRESTAÇÃO DE SERVIÇOS SERÁ EMITIDA E ENVIADA EM ATÉ 5 DIAS ÚTEIS AO CNPJ DECLARADO ACIMA.</p>
                             </div>
-                            <label><strong>São Paulo, <input id='dd2' class="col-md-2 mb-1" style="border: none;"> de <input id='mm2' class="col-md-3 mb-1" style="border: none;"> de <input id='yy2' class="col-md-3 mb-1" style="border: none;"></strong></label>
+                            <label><strong>${estado}, <input id='dd2' class="col-md-2 mb-1" style="border: none;"> de <input id='mm2' class="col-md-3 mb-1" style="border: none;"> de <input id='yy2' class="col-md-3 mb-1" style="border: none;"></strong></label>
                         </div>
                     </div>
                 </div>

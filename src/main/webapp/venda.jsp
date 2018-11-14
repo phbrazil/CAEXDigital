@@ -45,6 +45,25 @@
             <h3 class="text-muted">Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h3>
             <h5 class="text-muted">Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h5>
             <br>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label><strong>IRRF:  ${irrf}%</strong></label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label><strong>CSLL:  ${csll}%</strong></label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label><strong>COFINS  ${cofins}%</strong></label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label><strong>PIS:  ${pis}%</strong></label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label><strong>ISS:  ${iss}%</strong></label>
+                </div>
+
+            </div>
+
             <div class="col-md-8 order-md-1">
                 <form name = "finalizarVenda" action="${pageContext.request.contextPath}/finalizarVenda" method="POST" target="_blank">
                     <div class="inner">
