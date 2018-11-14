@@ -102,8 +102,6 @@ public class venda extends HttpServlet {
         }
 
         
-        System.out.println(irrf+"+++++++++++");
-
         request.setAttribute("irrf", irrf);
         request.setAttribute("csll", csll);
         request.setAttribute("cofins", cofins);

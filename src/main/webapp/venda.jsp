@@ -45,23 +45,25 @@
             <h3 class="text-muted">Cálculo baseado no estado de <span style = "color: #ff0080">${estado}</span></h3>
             <h5 class="text-muted">Cliente ${razaoSocial} <span style = "color: #ff0080">${optante}</span> do Simples Nacional</h5>
             <br>
-            <div class="row">
-                <div class="col-md-3 mb-3">
-                    <label><strong>IRRF:  ${irrf}%</strong></label>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label><strong>CSLL:  ${csll}%</strong></label>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label><strong>COFINS  ${cofins}%</strong></label>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label><strong>PIS:  ${pis}%</strong></label>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label><strong>ISS:  ${iss}%</strong></label>
-                </div>
+            <div class="col-md-8 order-md-1">
 
+                <div class="row">
+                    <div class="col-md-2 mb-3">
+                        <label><strong>IRRF:  ${irrf}%</strong></label>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label><strong>CSLL:  ${csll}%</strong></label>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label><strong>COFINS  ${cofins}%</strong></label>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label><strong>PIS:  ${pis}%</strong></label>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label><strong>ISS:  ${iss}%</strong></label>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-8 order-md-1">
@@ -75,7 +77,7 @@
                             </div>
                             <div class="col-md-2 mb-3">
                                 <label><strong>Valor item</strong></label>
-                                <input data-toggle="tooltip" title="Digite o Valor do Item vendido" class="form-control form-control-dark w-100" type="text"  id = "valor" name="valor" required>
+                                <input data-toggle="tooltip" onblur="Calcular(this.value)"title="Digite o Valor do Item vendido" class="form-control form-control-dark w-100" type="text"  id = "valor" name="valor" required>
                             </div>
                             <div class="col-md-2 mb-3">
                                 <label><strong>Valor total</strong></label>
@@ -114,6 +116,30 @@
         <script src="js/formatarMoeda.js"></script>
         <script src="js/collapse_button.js"></script>
         <script src="js/StatusVSProbability.js"></script>
+
+        <script>
+
+                                    function Calcular(valor) {
+
+                                        valor = valor.replace('.', '').replace(',', '.');
+
+                                        var irrf = ${irrf};
+                                        var csll = ${csll};
+                                        var cofins = ${cofins};
+                                        var pis = ${pis};
+                                        var iss = ${iss};
+
+                                        document.getElementById('valorTotal').value = converteFloatMoeda(valor*2);
+                                        
+                                        
+
+                                    }
+
+
+
+
+
+        </script>
 
         <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
