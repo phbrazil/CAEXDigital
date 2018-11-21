@@ -69,7 +69,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input readonly value= "${valor}" name="valorcompra" onkeydown="autofill()" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" type="text"  class="form-control" id="valorcompra" required>
+                                <input readonly value= "${valorTotal}" name="valorcompra" onkeydown="autofill()" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom" type="text"  class="form-control" id="valorcompra" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="input-group">
-                                <input readonly value= "${valor}" name="valorcompra2" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom"  type="text"  class="form-control" id="valorcompra2" required>
+                                <input readonly value= "${valorTotal}" name="valorcompra2" data-toggle="tooltip" title="Valor da Compra" data-placement="bottom"  type="text"  class="form-control" id="valorcompra2" required>
                             </div>
                         </div>
                         <div class="col-md-2 mb-3">

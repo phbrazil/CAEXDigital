@@ -123,15 +123,31 @@
 
                                         valor = valor.replace('.', '').replace(',', '.');
 
+                                        var total = 0;
+                                        var optante = ${optante};
                                         var irrf = ${irrf};
                                         var csll = ${csll};
                                         var cofins = ${cofins};
                                         var pis = ${pis};
                                         var iss = ${iss};
+                                        var irrfR = 0;
+                                        var csllR = 0;
+                                        var cofinsR = 0;
+                                        var pisR = 0;
+                                        var issR = 0;
 
-                                        document.getElementById('valorTotal').value = converteFloatMoeda(valor*2);
-                                        
-                                        
+                                        if (valor >= 666.66) {
+                                            irrfR = valor * irrf;
+                                        }
+                                        if (valor >= 215) {
+                                            csllR =  valor * csll;
+                                        }
+                                        total = valor-irrfR - csllR; 
+
+
+                                        document.getElementById('valorTotal').value = converteFloatMoeda(total);
+
+
 
                                     }
 

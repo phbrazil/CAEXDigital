@@ -57,7 +57,7 @@ public class venda extends HttpServlet {
         String cnpj = request.getParameter("cnpj");
         String estado = (String) sessao.getAttribute("estado");
 
-        if (estado.equals("São Paulo") && optante.equals("Não Optante")) {
+        if (estado.equals("São Paulo") && optante.equals("NÃO optante pelo Simples Nacional")) {
             
             irrf = 1.5;
             csll = 1.0;
@@ -72,7 +72,7 @@ public class venda extends HttpServlet {
             pis = 0.0;
             iss = 5.0;
 
-        } else if (estado.equals("Rio de Janeiro") && optante.equals("Não Optante")) {
+        } else if (estado.equals("Rio de Janeiro") && optante.equals("NÃO optante pelo Simples Nacional")) {
             irrf = 1.5;
             csll = 1.0;
             cofins = 3.0;
@@ -86,7 +86,7 @@ public class venda extends HttpServlet {
             pis = 0.0;
             iss = 5.0;
 
-        } else if (estado.equals("Porto Alegre") && optante.equals("Não Optante")) {
+        } else if (estado.equals("Porto Alegre") && optante.equals("NÃO optante pelo Simples Nacional")) {
             irrf = 1.5;
             csll = 1.0;
             cofins = 3.0;
