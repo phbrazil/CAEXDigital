@@ -78,6 +78,12 @@
                             <p><a class="dropdown-item" id = "liscore" href="FiltroListarScoreCard.jsp" style="text-decoration:none; color: white;">Listar Vendas</a></p>
                         </div>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger fonte" style="text-decoration:none; color: white;" href="fluxo.jsp">Fluxo</a>
+
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger fonte" style="text-decoration:none; color: white;" href="logOut.jsp">Sair</a>
 
@@ -130,36 +136,36 @@
 
         <script>
 
-            function myConsultar() {
-                var consultar = document.getElementById("consultar");
+                            function myConsultar() {
+                                var consultar = document.getElementById("consultar");
 
-                if (consultar.style.display === "none") {
-                    consultar.style.display = "block";
-                } else {
-                    consultar.style.display = "none";
+                                if (consultar.style.display === "none") {
+                                    consultar.style.display = "block";
+                                } else {
+                                    consultar.style.display = "none";
 
-                }
-            }
-            function myCadastrar() {
-                var cadastrar = document.getElementById("cadastrar");
+                                }
+                            }
+                            function myCadastrar() {
+                                var cadastrar = document.getElementById("cadastrar");
 
-                if (cadastrar.style.display === "none") {
-                    cadastrar.style.display = "block";
-                } else {
-                    cadastrar.style.display = "none";
+                                if (cadastrar.style.display === "none") {
+                                    cadastrar.style.display = "block";
+                                } else {
+                                    cadastrar.style.display = "none";
 
-                }
-            }
-            function myGerenciamento() {
-                var gerenciamento = document.getElementById("gerenciamento");
+                                }
+                            }
+                            function myGerenciamento() {
+                                var gerenciamento = document.getElementById("gerenciamento");
 
-                if (gerenciamento.style.display === "none") {
-                    gerenciamento.style.display = "block";
-                } else {
-                    gerenciamento.style.display = "none";
+                                if (gerenciamento.style.display === "none") {
+                                    gerenciamento.style.display = "block";
+                                } else {
+                                    gerenciamento.style.display = "none";
 
-                }
-            }
+                                }
+                            }
 
         </script>
 
