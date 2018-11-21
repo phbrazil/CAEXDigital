@@ -140,9 +140,15 @@
                                             irrfR = valor * irrf;
                                         }
                                         if (valor >= 215) {
-                                            csllR =  valor * csll;
+                                            csllR = valor * csll;
+                                            cofinsR = valor * cofins;
+                                            pisR = valor * pis;
                                         }
-                                        total = valor-irrfR - csllR; 
+
+                                        issR = valor * iss;
+
+
+                                        total = valor - irrfR - csllR - cofinsR - pisR - issR;
 
 
                                         document.getElementById('valorTotal').value = converteFloatMoeda(total);
@@ -206,9 +212,6 @@
         <script>
             $("#projectname").autocomplete("getdataProjetos.jsp");
         </script>
-
-
-
 
 
         <script src="js/feather.min.js"></script>
